@@ -3,3 +3,10 @@ test_login:
     name: "13800138006"
     password: "123456"
     expect: "登录成功"
+test_login_miss_part:
+  test_login_miss_part_001:
+    name: "13800138006"
+    password: ""
+  test_login_miss_part_002:
+    name: ""
+    password: "123456"

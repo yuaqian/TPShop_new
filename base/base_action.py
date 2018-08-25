@@ -44,3 +44,9 @@ class BaseAction:
             return True
         except Exception:
             return False
+
+    def is_location_enabled(self, location):
+        return self.find_element(location).get_attribute("enabled") == "true"
+
+    def is_location_clickable(self, location):
+        return self.find_element(location).get_attribute("clickable") == "true"
