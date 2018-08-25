@@ -30,7 +30,7 @@ class BaseAction:
         self.driver.press_keycode(66)
 
     def find_toast(self, message, timeout=3):
-        self.find_element(self.)
+
         """
         # message: 预期要获取的toast的部分消息
         """
