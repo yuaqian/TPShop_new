@@ -1,3 +1,4 @@
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -29,6 +30,7 @@ class BaseAction:
     def press_enter(self):
         self.driver.press_keycode(66)
 
+    @allure.step(title="判断toast是否存在")
     def find_toast(self, message, timeout=3):
 
         """
@@ -50,3 +52,10 @@ class BaseAction:
 
     def is_location_clickable(self, location):
         return self.find_element(location).get_attribute("clickable") == "true"
+
+    def is_location_exist(self, location):
+        try:
+            self.find_element(location)
+            return True
+        except:
+            return False

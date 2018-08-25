@@ -3,6 +3,30 @@ test_login:
     name: "13800138006"
     password: "123456"
     expect: "登录成功"
+  test_login1_002:
+    name: "13800138006"
+    password: "xxx"
+    expect: "密码错误"
+  test_login1_003:
+    name: "13800138006 "
+    password: "123456"
+    expect: "登录成功"
+  test_login1_004:
+    name: " 13800138006"
+    password: "123456"
+    expect: "账号不存在"
+  test_login1_005:
+    name: "138001380061"
+    password: "123456"
+    expect: "账号不存在"
+  test_login1_006:
+    name: "1380013800"
+    password: "123456"
+    expect: "账号不存在"
+  test_login1_007:
+    name: "13855552226"
+    password: "123456"
+    expect: "账号不存在"
 test_login_miss_part:
   test_login_miss_part_001:
     name: "13800138006"
